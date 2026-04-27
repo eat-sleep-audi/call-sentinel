@@ -5,56 +5,67 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Call Sentinel</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
 <style>
+    :root {
+        --navy: #0b1c2d;
+        --surface: #13293d;
+        --surface-2: #16324f;
+        --primary: #ff3b3b;
+        --text: #e6edf3;
+        --subtext: #9fb3c8;
+    }
+
     body {
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-        background: linear-gradient(180deg, #0d0d0f, #1a1a1d);
-        color: white;
+        font-family: 'Roboto', sans-serif;
+        background: var(--navy);
+        color: var(--text);
         text-align: center;
     }
 
     .container {
-        padding: 80px 20px;
-        max-width: 900px;
+        max-width: 920px;
         margin: auto;
+        padding: 80px 20px;
     }
 
     .logo {
         width: 110px;
-        border-radius: 20px;
-        margin-bottom: 25px;
-        box-shadow: 0 10px 40px rgba(255,0,0,0.35);
+        margin-bottom: 24px;
+        border-radius: 24px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.5);
     }
 
     h1 {
-        font-size: 42px;
-        margin-bottom: 10px;
-        letter-spacing: 1px;
+        font-size: 44px;
+        margin-bottom: 8px;
+        font-weight: 700;
     }
 
     .tagline {
         font-size: 20px;
-        color: #c7c7cc;
+        color: var(--subtext);
         margin-bottom: 40px;
     }
 
     .cta-button {
         display: inline-block;
-        padding: 16px 34px;
-        font-size: 17px;
-        font-weight: 600;
+        padding: 16px 36px;
+        font-size: 18px;
+        font-weight: 500;
         color: white;
-        background: linear-gradient(135deg, #ff2d2d, #ff6b6b);
-        border-radius: 14px;
+        background: var(--primary);
+        border-radius: 20px;
         text-decoration: none;
-        transition: all 0.25s ease;
-        box-shadow: 0 8px 30px rgba(255,45,45,0.45);
+        transition: 0.25s ease;
+        box-shadow: 0 8px 24px rgba(255,59,59,0.35);
     }
 
     .cta-button:hover {
         transform: translateY(-3px);
-        box-shadow: 0 12px 40px rgba(255,45,45,0.6);
+        box-shadow: 0 12px 30px rgba(255,59,59,0.55);
     }
 
     .features {
@@ -63,27 +74,30 @@
     }
 
     .feature {
-        background: #1f1f23;
-        padding: 22px;
-        border-radius: 16px;
+        background: var(--surface);
+        padding: 24px;
+        border-radius: 22px;
         margin-bottom: 18px;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-        border: 1px solid #2c2c30;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+        border: 1px solid var(--surface-2);
     }
 
     .feature strong {
         font-size: 18px;
+        display: block;
+        margin-bottom: 6px;
     }
 
     .feature p {
-        color: #b0b0b5;
-        margin-top: 6px;
+        color: var(--subtext);
+        margin: 0;
+        line-height: 1.6;
     }
 
     .footer {
         margin-top: 70px;
+        color: var(--subtext);
         font-size: 14px;
-        color: #8e8e93;
     }
 </style>
 </head>
@@ -96,9 +110,9 @@
 
     <h1>Call Sentinel</h1>
 
-    <p class="tagline">
+    <div class="tagline">
         Silence spam calls. Keep your peace.
-    </p>
+    </div>
 
     <a class="cta-button" href="#">
         Coming Soon to Google Play
